@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Colorful Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="main">
+		<div class="calculator">
+			<input type="text" id="result" readonly>
+			<table>
+				<tr>
+					<td><input type="button" value="AC" onclick="clearAll()"></td>
+					<td><input type="button" value="MC" onclick="clearMemory()"></td>
+					<td><input type="button" value="%" onclick="calculatePercentage()"></td>
+					<td><input type="button" value="/" onclick="addToInput('/')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="7" onclick="addToInput('7')"></td>
+					<td><input type="button" value="8" onclick="addToInput('8')"></td>
+					<td><input type="button" value="9" onclick="addToInput('9')"></td>
+					<td><input type="button" value="-" onclick="addToInput('-')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="4" onclick="addToInput('4')"></td>
+					<td><input type="button" value="5" onclick="addToInput('5')"></td>
+					<td><input type="button" value="6" onclick="addToInput('6')"></td>
+					<td><input type="button" value="+" onclick="addToInput('+')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="1" onclick="addToInput('1')"></td>
+					<td><input type="button" value="2" onclick="addToInput('2')"></td>
+					<td><input type="button" value="3" onclick="addToInput('3')"></td>
+					<td><input type="button" value="*" onclick="addToInput('*')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="0" onclick="addToInput('0')"></td>
+					<td><input type="button" value="." onclick="addToInput('.')"></td>
+					<td><input type="button" value="DEL" onclick="deleteLastCharacter()"></td>
+					<td><input type="button" value="=" onclick="calculate()"></td>
+				</tr>
+			</table>
+			<div class="toggle-button-container">
+				<div class="toggle-button" onclick="toggleCalculator()">
+					<span id="toggleText">OFF</span>
+				</div>
+			</div>
+			<div id="statusText" style="color: #ff0000; margin-top: 10px; display: none;">Calculator disabled</div>
+		</div>
+	</div>
+
+	<!-- warning -->
+
+	<div class="floating-container">
+		<div class="floating-box">
+		  <div class="warning-message">
+			Announcement: If you access calculator code visit my OFFICIAL WEBSITE
+		  </div>
+		  <a class="visit-button" href="https://sheikhsohan.netlify.app" onclick="checkFloatingBox(event)">YouTube Channel</a>
+		  <span class="close-button" onclick="closeFloatingBox()">❌</span>
+		</div>
+	  </div>
+	  
+
+	<div class="footer">
+		Created By ❤️ Sohan
+	</div>
+	
+
+	  <script src="script.js"></script>
+</body>
+</html>
